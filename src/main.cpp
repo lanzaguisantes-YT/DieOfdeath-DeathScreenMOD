@@ -1,6 +1,5 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
-#include <Geode/modify/CCParticleSystemQuad.hpp>
 #include <cocos2d.h>
 
 using namespace geode::prelude;
@@ -8,15 +7,6 @@ using namespace geode::prelude;
 static CCLabelBMFont* g_fpsLabel = nullptr;
 static int g_frameCount = 0;
 static float g_fpsTimer = 0.f;
-
-class $modify(CCParticleSystemQuad) {
-    bool initWithTotalParticles(unsigned int numberOfParticles, bool p1) {
-        if (Mod::get()->getSettingValue<bool>("disable-particles")) {
-            return false;
-        }
-        return CCParticleSystemQuad::initWithTotalParticles(numberOfParticles, p1);
-    }
-};
 
 class $modify(MyPlayLayer, PlayLayer) {
     bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
@@ -39,7 +29,6 @@ class $modify(MyPlayLayer, PlayLayer) {
             g_fpsTimer = 0.f;
         }
 
-        // Aplicar FPS limit al entrar al nivel
         int fpsLimit = Mod::get()->getSettingValue<int>("fps-limit");
         if (fpsLimit >= 30 && fpsLimit <= 360) {
             CCDirector::get()->setAnimationInterval(1.0 / fpsLimit);
@@ -65,7 +54,6 @@ class $modify(MyPlayLayer, PlayLayer) {
 
     void onQuit() {
         g_fpsLabel = nullptr;
-        // Restaurar FPS al salir del nivel
         CCDirector::get()->setAnimationInterval(1.0 / 60);
         PlayLayer::onQuit();
     }
