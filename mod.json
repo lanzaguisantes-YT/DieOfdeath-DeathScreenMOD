@@ -1,16 +1,14 @@
 {
   "geode": "5.7.1",
   "gd": {
-  "win": "2.2074",
-  "android": "2.2074"
-},
+    "win": "2.2074",
+    "android": "2.2074"
   },
   "id": "devai.optimization-menu",
   "name": "Optimization Menu",
   "version": "1.0.0",
   "developer": "DevAI",
   "description": "A simple optimization menu for Geometry Dash to improve performance.",
-  "links": {},
   "settings": {
     "disable-particles": {
       "type": "bool",
@@ -37,18 +35,6 @@
       "max": 360,
       "name": "FPS Limit",
       "description": "Set maximum FPS limit"
-    },
-    "disable-shaders": {
-      "type": "bool",
-      "default": false,
-      "name": "Disable Shaders",
-      "description": "Disables shader effects for better performance"
-    },
-    "reduce-quality": {
-      "type": "bool",
-      "default": false,
-      "name": "Reduce Texture Quality",
-      "description": "Reduces texture resolution for lower-end devices"
     }
   }
 }
