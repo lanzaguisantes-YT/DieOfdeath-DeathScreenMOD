@@ -5,7 +5,7 @@ set(CMAKE_OSX_ARCHITECTURES "x86_64")
 set(CMAKE_TOOLCHAIN_FILE "$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
 set(VCPKG_TARGET_TRIPLET "x64-windows" CACHE STRING "")
 
-project(OptimizationMenu VERSION 1.0.0)
+project(DOD death screen VERSION 1.0.0)
 
 add_library(${PROJECT_NAME} SHARED
     src/main.cpp
