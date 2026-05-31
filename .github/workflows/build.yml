@@ -1,0 +1,33 @@
+name: Build Geode Mod
+
+on:
+  push:
+    branches: [ main, principal ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        config:
+          - name: Android32
+            os: ubuntu-latest
+            platform: android32
+          - name: Android64
+            os: ubuntu-latest
+            platform: android64
+
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: geode-sdk/cli/.github/actions/install@main
+      - uses: geode-sdk/sdk/.github/actions/install@main
+      - uses: geode-sdk/sdk/.github/actions/build@main
+        with:
+          platform: ${{ matrix.config.platform }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OptimizationMenu-${{ matrix.config.platform }}
+          path: build/*.geode
