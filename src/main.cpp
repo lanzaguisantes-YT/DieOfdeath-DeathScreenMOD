@@ -10,11 +10,11 @@ static int g_frameCount = 0;
 static float g_fpsTimer = 0.f;
 
 class $modify(CCParticleSystemQuad) {
-    bool initWithTotalParticles(unsigned int numberOfParticles) {
+    bool initWithTotalParticles(unsigned int numberOfParticles, bool p1) {
         if (Mod::get()->getSettingValue<bool>("disable-particles")) {
             return false;
         }
-        return CCParticleSystemQuad::initWithTotalParticles(numberOfParticles);
+        return CCParticleSystemQuad::initWithTotalParticles(numberOfParticles, p1);
     }
 };
 
