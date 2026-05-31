@@ -1,40 +1,43 @@
 {
   "geode": "5.7.1",
   "gd": {
-  "win": "2.2081",
-  "android": "2.2081"
+    "win": "2.2081",
+    "android": "2.2081"
   },
-  "id": "devai.optimization-menu",
-  "name": "Optimization Menu",
+  "id": "devai.die-of-death",
+  "name": "Die of Death",
   "version": "1.0.0",
   "developer": "DevAI",
-  "description": "A simple optimization menu for Geometry Dash to improve performance.",
-  "settings": {
-    "disable-particles": {
-      "type": "bool",
-      "default": false,
-      "name": "Disable Particles",
-      "description": "Disables particle effects to improve FPS"
-    },
-    "disable-backgrounds": {
-      "type": "bool",
-      "default": false,
-      "name": "Disable Backgrounds",
-      "description": "Disables animated backgrounds"
-    },
-    "show-fps": {
-      "type": "bool",
-      "default": false,
-      "name": "Show FPS Counter",
-      "description": "Shows FPS counter on screen"
-    },
-    "fps-limit": {
-      "type": "int",
-      "default": 60,
-      "min": 30,
-      "max": 360,
-      "name": "FPS Limit",
-      "description": "Set maximum FPS limit"
-    }
+  "description": "In memory of whoever died.",
+  "resources": {
+    "files": [
+      "resources/frame_000.png",
+      "resources/frame_001.png",
+      "resources/frame_002.png",
+      "resources/frame_003.png",
+      "resources/frame_004.png",
+      "resources/frame_005.png",
+      "resources/frame_006.png",
+      "resources/frame_007.png",
+      "resources/frame_008.png",
+      "resources/frame_009.png",
+      "resources/frame_010.png",
+      "resources/frame_011.png",
+      "resources/frame_012.png",
+      "resources/frame_013.png",
+      "resources/frame_014.png",
+      "resources/frame_015.png",
+      "resources/frame_016.png",
+      "resources/frame_017.png",
+      "resources/frame_018.png",
+      "resources/frame_019.png",
+      "resources/frame_020.png",
+      "resources/frame_021.png",
+      "resources/frame_022.png",
+      "resources/frame_023.png",
+      "resources/frame_024.png",
+      "resources/frame_025.png",
+      "resources/frame_026.png"
+    ]
   }
 }
