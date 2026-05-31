@@ -39,6 +39,12 @@ class $modify(MyPlayLayer, PlayLayer) {
             g_fpsTimer = 0.f;
         }
 
+        // Aplicar FPS limit al entrar al nivel
+        int fpsLimit = Mod::get()->getSettingValue<int>("fps-limit");
+        if (fpsLimit >= 30 && fpsLimit <= 360) {
+            CCDirector::get()->setAnimationInterval(1.0 / fpsLimit);
+        }
+
         return true;
     }
 
@@ -59,11 +65,8 @@ class $modify(MyPlayLayer, PlayLayer) {
 
     void onQuit() {
         g_fpsLabel = nullptr;
+        // Restaurar FPS al salir del nivel
+        CCDirector::get()->setAnimationInterval(1.0 / 60);
         PlayLayer::onQuit();
     }
 };
-
-$on_mod(Loaded) {
-    int fpsLimit = Mod::get()->getSettingValue<int>("fps-limit");
-    CCDirector::get()->setAnimationInterval(1.0 / fpsLimit);
-}
