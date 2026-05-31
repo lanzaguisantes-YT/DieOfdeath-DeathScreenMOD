@@ -1,38 +1,33 @@
-# Optimization Menu — Geode Mod
+# Die of Death — Geode Mod
 
-Mod simple de optimización para Geometry Dash hecho con Geode SDK.
+Mod de comedia para Geometry Dash hecho con Geode SDK.
 
-## Funciones
+## ¿Qué hace?
 
-| Setting | Descripción |
-|---|---|
-| Disable Particles | Desactiva partículas para mejorar FPS |
-| Disable Backgrounds | Oculta el fondo animado |
-| Show FPS Counter | Muestra el contador de FPS en pantalla |
-| FPS Limit | Limita el FPS máximo (30–360) |
-| Disable Shaders | Desactiva shaders para mejor rendimiento |
-| Reduce Texture Quality | Reduce calidad de texturas |
+Cuando morís en cualquier nivel aparece una pantalla estilo "In Memory Of" con:
+- El nombre de tu personaje de GD
+- Una causa de muerte aleatoria y absurda
 
-## Compilación
+## Causas de muerte posibles
 
-1. Instalar [Geode SDK](https://geode-sdk.org)
-2. Instalar CMake y Visual Studio (Windows)
-3. Clonar este repositorio
-4. Compilar:
-```bash
-mkdir build && cd build
-cmake ..
-cmake --build .
-```
-4. El archivo `.geode` se generará automáticamente en `build/`
-
-## Instalación
-
-Renombrar el `.zip` a `.geode` y colocarlo en la carpeta `mods` de Geode,
-o usar el instalador de Geode directamente.
+- Was Pursued to their death.
+- Died because of a sneaky spike.
+- Died thinking too hard.
+- Died because they forgot to breathe.
+- Died of excess potassium.
+- Died because grandma called them for dinner.
+- Died because they blinked at the wrong time.
+- Died because it was Monday.
+- Died because they trusted the process.
+- Died because a pigeon distracted them.
+- Y más...
 
 ## Compatibilidad
 
-- GD 2.2074
-- Geode 4.0.0+
-- Windows / Android / macOS
+- GD 2.2081
+- Geode 5.7.1+
+- Windows / Android
+
+## Instalación
+
+Descargá el `.geode` desde la sección Artifacts de GitHub Actions y copialo a la carpeta de mods de Geode.
